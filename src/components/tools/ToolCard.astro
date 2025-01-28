@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  link: string;
+}
+
+const { title, description, icon, link } = Astro.props;
+---
+
+<div class="pt-6">
+  <div class="flow-root bg-white rounded-lg px-4 sm:px-6 pb-8">
+    <div class="-mt-6">
+      <div class="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg text-3xl">
+        {icon}
+      </div>
+      <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+        {title}
+      </h3>
+      <p class="mt-5 text-base text-gray-500">
+        {description}
+      </p>
+      <a
+        href={link}
+        class="mt-4 inline-flex items-center text-primary-600 hover:text-primary-700"
+      >
+        Try it now →
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogSection from '../../components/blog/BlogSection.astro';
+
+const title = "Yoga Blog";
+const description = "Explore our collection of yoga articles, tips, and guides for beginners.";
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <div class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-4">
+            {title}
+          </h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+    <BlogSection />
+  </main>
+</Layout>

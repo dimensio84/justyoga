@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FlexibilityAssessment from '../../components/tools/flexibility/FlexibilityAssessment.tsx';
+import FlexibilityContent from '../../components/tools/flexibility/FlexibilityContent.astro';
+
+const pageTitle = "Flexibility Assessment Tool";
+const description = "Evaluate your current flexibility level and get personalized recommendations for your yoga practice.";
+---
+
+<Layout title={pageTitle} description={description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-3xl mx-auto">
+      <!-- Hero Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-4">
+          {pageTitle}
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          {description}
+        </p>
+      </div>
+
+      <!-- Assessment Tool -->
+      <div class="bg-white shadow-lg rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Start Your Assessment</h2>
+        <FlexibilityAssessment client:load />
+      </div>
+
+      <!-- Content Section -->
+      <FlexibilityContent />
+    </div>
+  </div>
+</Layout>

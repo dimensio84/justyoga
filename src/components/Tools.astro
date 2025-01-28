@@ -1,0 +1,63 @@
+---
+const tools = [
+  {
+    title: 'Flexibility Assessment',
+    description: 'Get personalized recommendations based on your current flexibility level',
+    icon: '📏',
+    link: '/tools/flexibility-assessment'
+  },
+  {
+    title: 'Yoga Session Timer',
+    description: 'Customizable timer with preset beginner poses and breathing intervals',
+    icon: '⏱️',
+    link: '/tools/session-timer'
+  },
+  {
+    title: 'Pose Progress Tracker',
+    description: 'Track and visualize your improvement in fundamental poses',
+    icon: '📈',
+    link: '/tools/progress-tracker'
+  }
+];
+---
+
+<section class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Interactive Yoga Tools
+      </h2>
+      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+        Track your progress and enhance your practice with our specialized yoga tools.
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {tools.map(tool => (
+          <div class="pt-6">
+            <div class="flow-root bg-white rounded-lg px-6 pb-8">
+              <div class="-mt-6">
+                <div class="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg text-3xl">
+                  {tool.icon}
+                </div>
+                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                  {tool.title}
+                </h3>
+                <p class="mt-5 text-base text-gray-500">
+                  {tool.description}
+                </p>
+                <a
+                  href={tool.link}
+                  class="mt-4 inline-flex items-center text-primary-600 hover:text-primary-700"
+                >
+                  Try it now →
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

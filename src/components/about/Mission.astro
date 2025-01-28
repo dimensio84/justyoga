@@ -1,0 +1,29 @@
+---
+const missions = [
+  {
+    title: "Our Mission",
+    description: "To make yoga accessible to beginners by providing clear, practical guidance and tools for starting their practice."
+  },
+  {
+    title: "Our Approach",
+    description: "We believe in breaking down complex yoga concepts into simple, actionable steps that anyone can follow."
+  },
+  {
+    title: "Our Community",
+    description: "We foster a supportive environment where beginners can learn, grow, and share their yoga journey with others."
+  }
+];
+---
+
+<section class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-8 md:grid-cols-3">
+      {missions.map(item => (
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
+          <p class="text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

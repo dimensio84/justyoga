@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PoseTracker from '../../components/tools/tracker/PoseTracker';
+import TrackerContent from '../../components/tools/tracker/TrackerContent.astro';
+
+const pageTitle = "Pose Progress Tracker";
+const description = "Track your development in specific yoga poses over time with detailed progress metrics.";
+---
+
+<Layout title={pageTitle} description={description}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-4">
+          {pageTitle}
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          {description}
+        </p>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-lg p-8 mb-12">
+        <PoseTracker client:load />
+      </div>
+
+      <TrackerContent />
+    </div>
+  </div>
+</Layout>

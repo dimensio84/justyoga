@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Thank You!";
+const description = "Thank you for signing up for our free yoga guide.";
+---
+
+<Layout title={title} description={description}>
+  <main class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8 text-center">
+      <div>
+        <h1 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          Thank You!
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Your free yoga guide is on its way to your inbox. Please check your email to download the guide.
+        </p>
+        <div class="mt-8">
+          <a
+            href="/"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700"
+          >
+            Return to Homepage
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

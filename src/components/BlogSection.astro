@@ -1,0 +1,77 @@
+---
+const categories = [
+  'Beginner Poses',
+  'Breathing Techniques',
+  'Meditation Basics',
+  'Yoga Philosophy',
+  'Equipment Guide'
+];
+
+// Sample blog posts for demonstration
+const posts = [
+  {
+    title: 'Getting Started with Sun Salutations',
+    excerpt: 'Learn the fundamental sequence of poses that form the backbone of yoga practice.',
+    category: 'Beginner Poses',
+    image: '/images/sun-salutation.jpg',
+    date: '2024-03-20',
+    slug: 'getting-started-with-sun-salutations'
+  },
+  // Add more sample posts
+];
+---
+
+<section class="py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Latest Articles
+      </h2>
+      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+        Explore our collection of yoga articles, tips, and guides.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map(post => (
+        <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img
+            src={post.image}
+            alt={post.title}
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <span class="text-primary-600 text-sm font-medium">
+              {post.category}
+            </span>
+            <h3 class="mt-2 text-xl font-semibold text-gray-900">
+              <a href={`/blog/${post.slug}`} class="hover:text-primary-600">
+                {post.title}
+              </a>
+            </h3>
+            <p class="mt-3 text-base text-gray-500">
+              {post.excerpt}
+            </p>
+            <div class="mt-4">
+              <a
+                href={`/blog/${post.slug}`}
+                class="text-primary-600 hover:text-primary-700"
+              >
+                Read more →
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <a
+        href="/blog"
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700"
+      >
+        View All Articles
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EbookHero from '../components/ebook/EbookHero.astro';
+import EbookBenefits from '../components/ebook/EbookBenefits.astro';
+import EbookSignupForm from '../components/ebook/EbookSignupForm.astro';
+import { AWEBER_FORM_ID } from '../lib/env';
+
+const title = "Free Beginner's Yoga Guide";
+const description = "Download our free comprehensive guide to starting your yoga journey. Learn essential poses, breathing techniques, and establish a sustainable practice routine.";
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <EbookHero />
+    <div class="py-12">
+      <EbookSignupForm formId={AWEBER_FORM_ID} />
+    </div>
+    <EbookBenefits />
+  </main>
+</Layout>

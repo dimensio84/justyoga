@@ -1,0 +1,15 @@
+---
+interface Props extends astroHTML.JSX.InputHTMLAttributes {
+  placeholder: string;
+  required?: boolean;
+}
+
+const { placeholder, required = false, ...props } = Astro.props;
+---
+
+<input
+  {...props}
+  placeholder={placeholder}
+  required={required}
+  class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+/>

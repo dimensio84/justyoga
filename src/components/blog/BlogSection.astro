@@ -1,0 +1,42 @@
+---
+import BlogCard from './BlogCard.astro';
+import BlogCategories from './BlogCategories.astro';
+import BlogSearch from './BlogSearch.astro';
+
+const posts = [
+  {
+    title: 'Getting Started with Sun Salutations',
+    excerpt: 'Learn the fundamental sequence of poses that form the backbone of yoga practice.',
+    category: 'Beginner Poses',
+    date: '2024-03-20',
+    slug: 'getting-started-with-sun-salutations'
+  },
+  {
+    title: 'Basic Breathing Techniques for Beginners',
+    excerpt: 'Discover simple pranayama exercises to enhance your practice and reduce stress.',
+    category: 'Breathing Techniques',
+    date: '2024-03-18',
+    slug: 'basic-breathing-techniques'
+  },
+  {
+    title: 'Essential Yoga Props for Home Practice',
+    excerpt: 'A guide to the basic equipment you need to start practicing yoga at home.',
+    category: 'Equipment Guide',
+    date: '2024-03-15',
+    slug: 'essential-yoga-props'
+  }
+];
+---
+
+<section class="py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <BlogSearch />
+    <BlogCategories />
+    
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map(post => (
+        <BlogCard {...post} />
+      ))}
+    </div>
+  </div>
+</section>

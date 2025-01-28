@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutHero from '../components/about/AboutHero.astro';
+import Mission from '../components/about/Mission.astro';
+import Team from '../components/about/Team.astro';
+import Contact from '../components/about/Contact.astro';
+
+const title = "About Us";
+const description = "Learn about our mission to make yoga accessible to beginners and meet the team behind Beginners Yoga Blog.";
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <AboutHero />
+    <Mission />
+    <Team />
+    <Contact />
+  </main>
+</Layout>

@@ -1,0 +1,36 @@
+---
+const benefits = [
+  {
+    title: "Essential Poses",
+    description: "Learn 20+ beginner-friendly poses with detailed instructions",
+    icon: "🧘‍♀️"
+  },
+  {
+    title: "Breathing Techniques",
+    description: "Master fundamental pranayama practices for stress relief",
+    icon: "🫁"
+  },
+  {
+    title: "Practice Plans",
+    description: "Follow our 4-week program to establish your practice",
+    icon: "📅"
+  }
+];
+---
+
+<section class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900">What You'll Learn</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {benefits.map(benefit => (
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="text-4xl mb-4">{benefit.icon}</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+          <p class="text-gray-600">{benefit.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

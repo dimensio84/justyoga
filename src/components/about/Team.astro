@@ -1,0 +1,43 @@
+---
+const team = [
+  {
+    name: "Sarah Johnson",
+    role: "Lead Yoga Instructor",
+    description: "RYT-500 certified instructor with 10+ years of teaching experience, specializing in beginner-friendly yoga.",
+  },
+  {
+    name: "Michael Chen",
+    role: "Content Director",
+    description: "Yoga practitioner and writer dedicated to making yoga knowledge accessible to everyone.",
+  },
+  {
+    name: "Emma Williams",
+    role: "Community Manager",
+    description: "Passionate about building inclusive yoga communities and supporting beginners on their journey.",
+  }
+];
+---
+
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-gray-900">Meet Our Team</h2>
+      <p class="mt-4 text-lg text-gray-600">Dedicated professionals committed to your yoga journey</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-3">
+      {team.map(member => (
+        <div class="text-center">
+          <div class="relative w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 mx-auto mb-4">
+            <div class="absolute inset-0 bg-gradient-to-b from-primary-100 to-primary-500 rounded-full"></div>
+            <div class="relative w-full h-full flex items-center justify-center text-2xl sm:text-3xl md:text-4xl">
+              {member.name[0]}
+            </div>
+          </div>
+          <h3 class="text-lg font-medium text-gray-900">{member.name}</h3>
+          <p class="text-sm text-primary-600 mb-2">{member.role}</p>
+          <p class="text-sm sm:text-base text-gray-600">{member.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

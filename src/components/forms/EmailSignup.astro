@@ -1,0 +1,40 @@
+---
+import Button from '../ui/Button.astro';
+import Input from '../ui/Input.astro';
+
+// Form submission endpoint
+const FORM_ACTION = "https://www.aweber.com/scripts/addlead.pl";
+---
+
+<form 
+  method="post" 
+  action={FORM_ACTION}
+  class="flex flex-col w-full max-w-lg gap-3"
+  target="_blank"
+>
+  <!-- AWeber required hidden fields -->
+  <input type="hidden" name="meta_web_form_id" value="404745113" />
+  <input type="hidden" name="meta_split_id" value="" />
+  <input type="hidden" name="listname" value="awlist6428785" />
+  <input type="hidden" name="redirect" value="https://beginngersyogablog.com" />
+  <input type="hidden" name="meta_adtracking" value="Yoga_Blog_Signup" />
+  <input type="hidden" name="meta_message" value="1" />
+  <input type="hidden" name="meta_required" value="name,email" />
+  <input type="hidden" name="meta_tooltip" value="" />
+
+  <Input
+    type="text"
+    name="name"
+    placeholder="Enter your name"
+    required={true}
+  />
+  <Input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    required={true}
+  />
+  <Button type="submit">
+    Get Your Free Yoga Guide
+  </Button>
+</form>

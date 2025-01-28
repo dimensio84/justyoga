@@ -1,0 +1,41 @@
+---
+const contactMethods = [
+  {
+    title: "Email",
+    description: "Get in touch with questions",
+    detail: "hello@beginnersyoga.com",
+    icon: "✉️"
+  },
+  {
+    title: "Social Media",
+    description: "Follow us for daily tips",
+    detail: "@beginnersyoga",
+    icon: "📱"
+  },
+  {
+    title: "Newsletter",
+    description: "Weekly yoga insights",
+    detail: "Subscribe below",
+    icon: "📮"
+  }
+];
+---
+
+<section class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-gray-900">Get in Touch</h2>
+      <p class="mt-4 text-lg text-gray-600">We'd love to hear from you</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-3">
+      {contactMethods.map(method => (
+        <div class="text-center">
+          <div class="text-4xl mb-4">{method.icon}</div>
+          <h3 class="text-lg font-medium text-gray-900">{method.title}</h3>
+          <p class="text-sm text-gray-600 mb-2">{method.description}</p>
+          <p class="text-primary-600">{method.detail}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
